@@ -26,12 +26,12 @@ router.get("/ocr/:statusId", async (req, res) => {
 })
 
 // Save OCR documents to static folder and mongoDB
-const saveDocument = document => {
+const saveDocument = (document, uploadedBy) => {
     document.mv('./uploads/' + document.name)
     const ocrDoc = new OCRDocument({
 		fileName: document.name,
         fileUrl: "/" + document.name,
-        uploadedBy: "5f9c4151c6f8e54c3bfd51a6",
+        uploadedBy: uploadedBy,
         uploadedDate: Date.now(),
         statusId: 1
     })
@@ -55,11 +55,11 @@ router.post('/upload-documents', async (req, res) => {
 
             if(Array.isArray(req.files.documents)){
                 req.files.documents.forEach((document) => {
-                    data.push(saveDocument(document))
+                    data.push(saveDocument(document, req.body.uploadedBy))
                 })
             } else {
                 let document = req.files.documents
-                data.push(saveDocument(document))
+                data.push(saveDocument(document, req.body.uploadedBy))
             }
             
             res.send({
