@@ -110,7 +110,6 @@ router.post("/invoice/edit", async (req, res) => {
         await InvoiceDocument.update(
             { _id: req.body._id, },
             {
-                ocrDocumentId: req.body.ocrDocumentId,
                 invoiceNo: req.body.invoiceNo,
                 invoiceDate: req.body.invoiceDate,
                 customerName: req.body.customerName,
@@ -123,5 +122,34 @@ router.post("/invoice/edit", async (req, res) => {
         res.status(500).send(error)
     }
 })
+
+// let runPy = new Promise(function(success, nosuccess) {
+
+//     const { spawn } = require('child_process');
+//     const pyprog = spawn('python', ['./../pypy.py']);
+
+//     pyprog.stdout.on('data', function(data) {
+
+//         success(data);
+//     });
+
+//     pyprog.stderr.on('data', (data) => {
+
+//         nosuccess(data);
+//     });
+// });
+
+// // Run python model
+// router.get('/', (req, res) => {
+//     const { spawn } = require('child_process');
+//     const pyProg = spawn('python', ['./../pypy.py']);
+
+//     pyProg.stdout.on('data', function(data) {
+
+//         console.log(data.toString());
+//         res.write(data);
+//         res.end('end');
+//     });
+// })
 
 module.exports = router
