@@ -4,7 +4,7 @@
   "description": "Backend for Techathon - OCR Project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "npm index.js"
   },
   "repository": {
     "type": "git",

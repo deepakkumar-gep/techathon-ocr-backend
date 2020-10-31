@@ -2,17 +2,21 @@ const mongoose = require("mongoose")
 
 const lineDetailSchema = mongoose.Schema({
     lineNo: String,
+    itemNo: String,
     itemDescription: String,
-    itemUnitPrice: String,
-    itemQty: String,
-    itemAmount: String
+    itemUnitPrice: Number,
+    itemQty: Number,
+    itemAmount: Number
 })
 
 const documentDetailSchema = mongoose.Schema({
     invoiceNo: String,
-    invoiceDate: String,
+    invoiceDate: Date,
     customerName: String,
-    lineDetail: [lineDetailSchema]
+    lineDetail: [lineDetailSchema],
+    invoiceSubTotal: Number,
+    invoiceTax: Number,
+    invoiceTotal: Number
 })
 
 const ocrSchema = mongoose.Schema({
@@ -41,4 +45,4 @@ const ocrSchema = mongoose.Schema({
     documenDetail: documentDetailSchema
 })
 
-module.exports = mongoose.model("OCRCollection", ocrSchema)
+module.exports = mongoose.model("OCRDocument", ocrSchema)
