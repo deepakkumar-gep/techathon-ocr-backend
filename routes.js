@@ -107,7 +107,7 @@ router.post("/invoice/add", async (req, res) => {
 // Update existing Invoice document
 router.post("/invoice/edit", async (req, res) => {
     try {
-        await InvoiceDocument.update(
+        const invoice = await InvoiceDocument.update(
             { _id: req.body._id, },
             {
                 invoiceNo: req.body.invoiceNo,
@@ -117,7 +117,8 @@ router.post("/invoice/edit", async (req, res) => {
                 invoiceSubTotal: req.body.invoiceSubTotal,
                 invoiceTax: req.body.invoiceTax,
                 invoiceTotal: req.body.invoiceTotal
-            });
+            })
+        res.send(invoice)
     } catch (error) {
         res.status(500).send(error)
     }

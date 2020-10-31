@@ -14,6 +14,10 @@ const invoiceSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true
     },
+	fileUrl: {
+        type: String,
+        required: true
+    },
     invoiceNo: String,
     invoiceDate: String,
     customerName: String,
