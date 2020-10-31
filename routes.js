@@ -84,6 +84,17 @@ router.get("/invoice/:id", async (req, res) => {
     }
 })
 
+// Get Invoice documents based on invoiceNo
+router.get("/invoice/search/:invoiceNo", async (req, res) => {
+    try {
+        let filter = {invoiceNo: req.params.invoiceNo}
+        const invoice = await InvoiceDocument.find(filter)
+        res.send(invoice)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
 // Save new Invoice document
 router.post("/invoice/add", async (req, res) => {
     try {
@@ -123,34 +134,5 @@ router.post("/invoice/edit", async (req, res) => {
         res.status(500).send(error)
     }
 })
-
-// let runPy = new Promise(function(success, nosuccess) {
-
-//     const { spawn } = require('child_process');
-//     const pyprog = spawn('python', ['./../pypy.py']);
-
-//     pyprog.stdout.on('data', function(data) {
-
-//         success(data);
-//     });
-
-//     pyprog.stderr.on('data', (data) => {
-
-//         nosuccess(data);
-//     });
-// });
-
-// // Run python model
-// router.get('/', (req, res) => {
-//     const { spawn } = require('child_process');
-//     const pyProg = spawn('python', ['./../pypy.py']);
-
-//     pyProg.stdout.on('data', function(data) {
-
-//         console.log(data.toString());
-//         res.write(data);
-//         res.end('end');
-//     });
-// })
 
 module.exports = router
