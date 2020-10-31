@@ -7,10 +7,13 @@ const morgan = require('morgan')
 const _ = require('lodash')
 
 const routes = require("./routes")
+const config = require('./config');
+
+const connectionString = config.db.connectionString
 
 mongoose
-    .connect("mongodb+srv://techathon2020:techathon2020@cluster0.qalge.mongodb.net/OCR?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
-	.then(() => {
+    .connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
         const app = express()
 
         app.use(express.static('uploads'))
@@ -31,7 +34,7 @@ mongoose
 
         app.use("/api", routes)
 
-		app.listen(5000, () => {
-			console.log("Techathon OCR server has started!")
+		app.listen(config.app.port, () => {
+			console.log("Techathon OCR server has started on port " + config.app.port)
 		})
     })

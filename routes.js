@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router()
 
 const OCRDocument = require("./models/ocr")
+const InvoiceDocument = require("./models/invoice")
 
 // Get all OCR documents
 router.get("/ocr", async (req, res) => {
@@ -27,14 +28,14 @@ router.get("/ocr/:statusId", async (req, res) => {
 // Save OCR documents to static folder and mongoDB
 const saveDocument = document => {
     document.mv('./uploads/' + document.name)
-    const ocrDocument = new OCRDocument({
+    const ocrDoc = new OCRDocument({
 		fileName: document.name,
         fileUrl: "/" + document.name,
         uploadedBy: "5f9c4151c6f8e54c3bfd51a6",
         uploadedDate: Date.now(),
         statusId: 1
     })
-    ocrDocument.save()
+    ocrDoc.save()
     return ({
         name: document.name,
         size: document.size
@@ -67,6 +68,57 @@ router.post('/upload-documents', async (req, res) => {
                 data: data
             })
         }
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
+// Get Invoice documents based on id
+router.get("/invoice/:id", async (req, res) => {
+    try {
+        let filter = {_id: req.params.id}
+        const invoice = await InvoiceDocument.find(filter)
+        res.send(invoice)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
+// Save new Invoice document
+router.post("/invoice/add", async (req, res) => {
+    try {
+        const invoiceDoc = new InvoiceDocument({
+            ocrDocumentId: req.body.ocrDocumentId,
+            invoiceNo: req.body.invoiceNo,
+            invoiceDate: req.body.invoiceDate,
+            customerName: req.body.customerName,
+            lineDetail: req.body.lineDetail,
+            invoiceSubTotal: req.body.invoiceSubTotal,
+            invoiceTax: req.body.invoiceTax,
+            invoiceTotal: req.body.invoiceTotal
+        })
+        const invoice = await invoiceDoc.save()
+        res.send(invoice)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
+// Update existing Invoice document
+router.post("/invoice/edit", async (req, res) => {
+    try {
+        await InvoiceDocument.update(
+            { _id: req.body._id, },
+            {
+                ocrDocumentId: req.body.ocrDocumentId,
+                invoiceNo: req.body.invoiceNo,
+                invoiceDate: req.body.invoiceDate,
+                customerName: req.body.customerName,
+                lineDetail: req.body.lineDetail,
+                invoiceSubTotal: req.body.invoiceSubTotal,
+                invoiceTax: req.body.invoiceTax,
+                invoiceTotal: req.body.invoiceTotal
+            });
     } catch (error) {
         res.status(500).send(error)
     }

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const lineDetailSchema = mongoose.Schema({
+const invoiceLineDetailSchema = mongoose.Schema({
     lineNo: String,
     itemNo: String,
     itemDescription: String,
@@ -15,9 +15,9 @@ const invoiceSchema = mongoose.Schema({
         required: true
     },
     invoiceNo: String,
-    invoiceDate: Date,
+    invoiceDate: String,
     customerName: String,
-    lineDetail: [lineDetailSchema],
+    lineDetail: [invoiceLineDetailSchema],
     invoiceSubTotal: Number,
     invoiceTax: Number,
     invoiceTotal: Number

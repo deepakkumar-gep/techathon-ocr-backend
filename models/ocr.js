@@ -11,7 +11,7 @@ const lineDetailSchema = mongoose.Schema({
 
 const documentDetailSchema = mongoose.Schema({
     invoiceNo: String,
-    invoiceDate: Date,
+    invoiceDate: String,
     customerName: String,
     lineDetail: [lineDetailSchema],
     invoiceSubTotal: Number,
