@@ -2,7 +2,8 @@ const Tesseract = require('tesseract.js')
 const pdf2pic = require('pdf2pic')
 
 const getCurrencyValue = currencyString => {
-    return Number(currencyString.replace(/[^0-9.-]+/g,""))
+    const value = Number(currencyString.replace(/[^0-9.-]+/g,""))
+    return isNaN(value) ? 0 : value
 }
 
 const convertPdfToImg = (filePath) => {
@@ -67,11 +68,8 @@ const performOcr = async (filePath) => {
                 invoiceData.invoiceTotal = getCurrencyValue(match[1].trim())
             }
         }
-        // process.exit(0)
     })
     return invoiceData
 }
-
-// performOcr('./invoiceOcr/SampleInvoice.png')
 
 module.exports = { performOcr }
