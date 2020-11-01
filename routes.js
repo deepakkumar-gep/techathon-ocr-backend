@@ -28,12 +28,13 @@ router.get("/ocr/:statusId", async (req, res) => {
 // Update OCR document status
 router.post("/ocr/update-status", async (req, res) => {
     try {
-        const ocrDoc = await InvoiceDocument.OCRDocument(
+        const ocrDoc = await OCRDocument.update(
             { _id: req.body.ocrDocumentId },
-            { statusId: req.body.statusId }
+            { statusId: parseInt(req.body.statusId) }
             )
         res.send(ocrDoc)
     } catch (error) {
+        console.log(error)
         res.status(500).send(error)
     }
 })

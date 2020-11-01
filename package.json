@@ -4,6 +4,7 @@
   "description": "Backend for Techathon - OCR Project",
   "main": "index.js",
   "scripts": {
+    "prestart": "node importmockdata.js",
     "start": "nodemon index.js"
   },
   "repository": {
@@ -29,6 +30,7 @@
     "mongoose": "^5.10.11",
     "morgan": "^1.10.0",
     "pdf2pic": "^2.1.2",
+    "fs-extra": "^9.0.1",
     "tesseract.js": "^2.1.1"
   }
 }

@@ -1,0 +1,167 @@
+[
+    {
+        "fileName": "invoice1.png",
+        "fileUrl": "/documents/invoice1.png",
+        "uploadedBy": "Jaydeep Ranoliya",
+        "uploadedDate": "2019-02-11T10:30:47.023+00:00",
+        "statusId": 4,
+        "reasonId": 0,
+        "invoiceDocumentId": "",
+        "documentDetail" : {
+            "invoiceNo": "US-001",
+            "invoiceDate": "2019-02-11",
+            "customerName": "John Smith",
+            "lineDetail": [
+                {
+                    "lineNo" : "1",
+                    "itemNo" : "1",
+                    "itemDescription" : "front and rear break cable",
+                    "itemUnitPrice" : 100,
+                    "itemQty": 1,
+                    "itemAmount": 100
+                },
+                {
+                    "lineNo" : "2",
+                    "itemNo" : "2",
+                    "itemDescription" : "New set of pedal arms",
+                    "itemUnitPrice" : 15,
+                    "itemQty": 2,
+                    "itemAmount": 30
+                },
+                {
+                    "lineNo" : "3",
+                    "itemNo" : "3",
+                    "itemDescription" : "Labour 3 hours",
+                    "itemUnitPrice" : 5,
+                    "itemQty": 3,
+                    "itemAmount": 15
+                }
+            ],
+            "invoiceSubTotal" : 145,
+            "invoiceTax" : 0.06,
+            "invoiceTotal" : 145.06
+        }
+    },
+    {
+        "fileName": "invoice2.png",
+        "fileUrl": "/documents/invoice2.png",
+        "uploadedBy": "Jaydeep Ranoliya",
+        "uploadedDate": "2020-01-05T10:30:47.023+00:00",
+        "statusId": 4,
+        "reasonId": 0,
+        "invoiceDocumentId": "",
+        "documentDetail" : {
+            "invoiceNo": "US-205",
+            "invoiceDate": "2020-01-05",
+            "customerName": "Sagar",
+            "lineDetail": [
+                {
+                    "lineNo" : "1",
+                    "itemNo" : "1",
+                    "itemDescription" : "Laptop",
+                    "itemUnitPrice" : 70000,
+                    "itemQty": 1,
+                    "itemAmount": 70000
+                }
+            ],
+            "invoiceSubTotal" : 70000,
+            "invoiceTax" : 6300,
+            "invoiceTotal" : 76300
+        }
+    },
+    {
+        "fileName": "invoice3.png",
+        "fileUrl": "/documents/invoice2.png",
+        "uploadedBy": "Jaydeep Ranoliya",
+        "uploadedDate": "2020-03-12T10:30:47.023+00:00",
+        "statusId": 4,
+        "reasonId": 0,
+        "invoiceDocumentId": "",
+        "documentDetail" : {
+            "invoiceNo": "US-125",
+            "invoiceDate": "2020-03-12",
+            "customerName": "Deepak",
+            "lineDetail": [
+                {
+                    "lineNo" : "1",
+                    "itemNo" : "1",
+                    "itemDescription" : "Jeans",
+                    "itemUnitPrice" : 1000,
+                    "itemQty": 3,
+                    "itemAmount": 3000
+                },
+                {
+                    "lineNo" : "2",
+                    "itemNo" : "2",
+                    "itemDescription" : "Shirt",
+                    "itemUnitPrice" : 700,
+                    "itemQty": 5,
+                    "itemAmount": 3500
+                }
+            ],
+            "invoiceSubTotal" : 6500,
+            "invoiceTax" : 585,
+            "invoiceTotal" : 7085
+        }
+    },
+    {
+        "fileName": "invoice4.png",
+        "fileUrl": "/documents/invoice4.png",
+        "uploadedBy": "Jaydeep Ranoliya",
+        "uploadedDate": "2020-05-04T10:30:47.023+00:00",
+        "statusId": 4,
+        "reasonId": 0,
+        "invoiceDocumentId": "",
+        "documentDetail" : {
+            "invoiceNo": "US-456",
+            "invoiceDate": "2020-05-04",
+            "customerName": "Gyan",
+            "lineDetail": [
+                {
+                    "lineNo" : "1",
+                    "itemNo" : "1",
+                    "itemDescription" : "Watch",
+                    "itemUnitPrice" : 20000,
+                    "itemQty": 1,
+                    "itemAmount": 20000
+                },
+                {
+                    "lineNo" : "2",
+                    "itemNo" : "2",
+                    "itemDescription" : "Shoes",
+                    "itemUnitPrice" : 5000,
+                    "itemQty": 2,
+                    "itemAmount": 10000
+                },
+                {
+                    "lineNo" : "3",
+                    "itemNo" : "3",
+                    "itemDescription" : "Mobile Cover",
+                    "itemUnitPrice" : 500,
+                    "itemQty": 1,
+                    "itemAmount": 500
+                },
+                {
+                    "lineNo" : "4",
+                    "itemNo" : "4",
+                    "itemDescription" : "Earphone",
+                    "itemUnitPrice" : 2000,
+                    "itemQty": 2,
+                    "itemAmount": 4000
+                }
+            ],
+            "invoiceSubTotal" : 34500,
+            "invoiceTax" : 3105,
+            "invoiceTotal" : 37605
+        }
+    },
+    {
+        "fileName": "invoice5.png",
+        "fileUrl": "/documents/invoice5.png",
+        "uploadedBy": "Jaydeep Ranoliya",
+        "uploadedDate": "2020-08-25T10:30:47.023+00:00",
+        "statusId": 3,
+        "reasonId": 1,
+        "invoiceDocumentId": ""
+    }
+]
