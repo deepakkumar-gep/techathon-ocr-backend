@@ -29,6 +29,15 @@ async function run() {
     const collectionInvoice = database.collection(collectionInvoiceName);
     var sampleocr = JSON.parse(fs.readFileSync(mockdataJsonFilePathOcr, 'utf8'));
     var sampleinvoice = JSON.parse(fs.readFileSync(mockdataJsonFilepathInvoice, 'utf8'));
+
+    //Delete existing documents
+    const queryDeleteOcr = { fileName : /^/ };
+    const queryDeleteInvoice = { customerName: /^/ };
+    const resultDeleteOcr = await collectionOcr.deleteMany(queryDeleteOcr);
+    const resultDeleteInvoice = await collectionInvoice.deleteMany(queryDeleteInvoice);
+    console.log("Deleted " + resultDeleteOcr.deletedCount + " documents");
+    console.log("Deleted " + resultDeleteInvoice.deletedCount + " documents");
+
     const len = sampleocr.length;
     for (i = 0; i < len; i++) {
 
