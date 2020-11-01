@@ -2,7 +2,7 @@
     {
         "fileName": "invoice1.png",
         "fileUrl": "/documents/invoice1.png",
-        "uploadedBy": "Jaydeep Ranoliya",
+        "uploadedBy": "John Smith",
         "uploadedDate": "2019-02-11T10:30:47.023+00:00",
         "statusId": 4,
         "reasonId": 0,
@@ -45,7 +45,7 @@
     {
         "fileName": "invoice2.png",
         "fileUrl": "/documents/invoice2.png",
-        "uploadedBy": "Jaydeep Ranoliya",
+        "uploadedBy": "John Smith",
         "uploadedDate": "2020-01-05T10:30:47.023+00:00",
         "statusId": 4,
         "reasonId": 0,
@@ -72,7 +72,7 @@
     {
         "fileName": "invoice3.png",
         "fileUrl": "/documents/invoice2.png",
-        "uploadedBy": "Jaydeep Ranoliya",
+        "uploadedBy": "John Smith",
         "uploadedDate": "2020-03-12T10:30:47.023+00:00",
         "statusId": 4,
         "reasonId": 0,
@@ -107,7 +107,7 @@
     {
         "fileName": "invoice4.png",
         "fileUrl": "/documents/invoice4.png",
-        "uploadedBy": "Jaydeep Ranoliya",
+        "uploadedBy": "John Smith",
         "uploadedDate": "2020-05-04T10:30:47.023+00:00",
         "statusId": 4,
         "reasonId": 0,
@@ -158,7 +158,7 @@
     {
         "fileName": "invoice5.png",
         "fileUrl": "/documents/invoice5.png",
-        "uploadedBy": "Jaydeep Ranoliya",
+        "uploadedBy": "John Smith",
         "uploadedDate": "2020-08-25T10:30:47.023+00:00",
         "statusId": 3,
         "reasonId": 1,
