@@ -1,6 +1,7 @@
 [
     {
         "ocrDocumentId": "",
+        "fileUrl": "/documents/invoice1.png",
         "invoiceNo": "US-001",
         "invoiceDate": "2019-02-11",
         "customerName": "Jaydeep",
@@ -36,6 +37,7 @@
     },
     {
         "ocrDocumentId": "",
+        "fileUrl": "/documents/invoice2.png",
         "invoiceNo": "US-205",
         "invoiceDate": "2020-01-05",
         "customerName": "Sagar",
@@ -55,6 +57,7 @@
     },
     {
         "ocrDocumentId": "",
+        "fileUrl": "/documents/invoice3.png",
         "invoiceNo": "US-125",
         "invoiceDate": "2020-03-12",
         "customerName": "Deepak",
@@ -82,6 +85,7 @@
     },
     {
         "ocrDocumentId": "",
+        "fileUrl": "/documents/invoice4.png",
         "invoiceNo": "US-456",
         "invoiceDate": "2020-05-04",
         "customerName": "Gyan",
@@ -125,6 +129,7 @@
     },
     {
         "ocrDocumentId": "",
+        "fileUrl": "/documents/invoice5.png",
         "invoiceNo": "US-900",
         "invoiceDate": "2020-08-25",
         "customerName": "Saranya",
