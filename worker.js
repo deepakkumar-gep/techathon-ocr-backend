@@ -27,7 +27,7 @@ const execModel = async () => {
                     invoiceNo: documentDetail.invoiceNo,
                     invoiceDate: documentDetail.invoiceDate,
                     customerName: documentDetail.customerName,
-                    // lineDetail: documentDetail.lineDetail,
+                    lineDetail: documentDetail.lineDetail,
                     invoiceSubTotal: documentDetail.invoiceSubTotal,
                     invoiceTax: documentDetail.invoiceTax,
                     invoiceTotal: documentDetail.invoiceTotal
@@ -40,7 +40,7 @@ const execModel = async () => {
                                 invoiceNo: documentDetail.invoiceNo,
                                 invoiceDate: documentDetail.invoiceDate,
                                 customerName: documentDetail.customerName,
-                                // lineDetail: documentDetail.lineDetail,
+                                lineDetail: documentDetail.lineDetail,
                                 invoiceSubTotal: documentDetail.invoiceSubTotal,
                                 invoiceTax: documentDetail.invoiceTax,
                                 invoiceTotal: documentDetail.invoiceTotal
