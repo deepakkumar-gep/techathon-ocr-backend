@@ -25,6 +25,19 @@ router.get("/ocr/:statusId", async (req, res) => {
     }
 })
 
+// Update OCR document status
+router.post("/ocr/update-status", async (req, res) => {
+    try {
+        const ocrDoc = await InvoiceDocument.OCRDocument(
+            { _id: req.body.ocrDocumentId },
+            { statusId: req.body.statusId }
+            )
+        res.send(ocrDoc)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
 // Save OCR documents to static folder and mongoDB
 const saveDocument = (document, uploadedBy) => {
     document.mv('./uploads/' + document.name)

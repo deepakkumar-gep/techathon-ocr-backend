@@ -161,7 +161,8 @@ const performOcr = async (filePath) => {
                 invoiceData.invoiceTotal = getCurrencyValue(match[1].trim())
             }
         }
-        invoiceData.lineDetails = getLineItems(ocrLines)
+        let lineDetail = getLineItems(ocrLines)
+        invoiceData.lineDetail = lineDetail
     })
     return invoiceData
 }
