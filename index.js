@@ -7,7 +7,8 @@ const morgan = require('morgan')
 const _ = require('lodash')
 
 const routes = require("./routes")
-const config = require('./config');
+const config = require('./config')
+const worker = require('./worker')
 
 const connectionString = config.db.connectionString
 
@@ -35,6 +36,9 @@ mongoose
         app.use("/api", routes)
 
 		app.listen(config.app.port, () => {
+            setInterval(function () {
+                worker.execModel()
+            }, 30000);
 			console.log("Techathon OCR server has started on port " + config.app.port)
 		})
     })

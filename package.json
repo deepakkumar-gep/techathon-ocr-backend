@@ -27,6 +27,8 @@
     "express-fileupload": "^1.2.0",
     "lodash": "^4.17.20",
     "mongoose": "^5.10.11",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pdf2pic": "^2.1.2",
+    "tesseract.js": "^2.1.1"
   }
 }
