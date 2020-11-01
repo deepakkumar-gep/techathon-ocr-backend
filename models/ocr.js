@@ -42,7 +42,7 @@ const ocrSchema = mongoose.Schema({
     },
     reasonId: Number,
     invoiceDocumentId: mongoose.Schema.Types.ObjectId,
-    documenDetail: documentDetailSchema
+    documentDetail: documentDetailSchema
 })
 
 module.exports = mongoose.model("OCRDocument", ocrSchema)
